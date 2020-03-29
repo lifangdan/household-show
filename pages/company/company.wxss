@@ -1,0 +1,34 @@
+/* pages/company/company.wxss */
+.company-img{
+  height: 300rpx;
+  overflow: hidden;
+  position: relative;
+}
+.company-name{
+  position: absolute;
+  top:20rpx;
+  left: 0;
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 0rpx 30rpx 0 15rpx;
+  background: rgba(0, 0, 0, 0.5);
+  border-top-right-radius: 25rpx;
+  border-bottom-right-radius: 25rpx;
+  color: #fff;
+}
+.company-img image{
+  width: 100%;
+  height: 100%;
+}
+.comany-info{
+  padding: 20rpx;
+}
+.comany-info .item{
+  padding: 20rpx 0;
+  border-bottom: 1px solid #e7e7e7;
+  text-align: justify；
+}
+.comany-info .item .title{
+  color: #999;
+  margin-bottom: 10rpx
+}

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/company/company",
     "pages/index/index",
     "pages/catalog/catalog",
     "pages/newGoods/newGoods",
@@ -40,6 +41,7 @@
     "pages/ucenter/aftersale/aftersale",
     "pages/ucenter/aftersaleList/aftersaleList",
     "pages/ucenter/aftersaleDetail/aftersaleDetail"
+    
   ],
   "window": {
     "navigationBarBackgroundColor": "#FFFFFF",
@@ -58,19 +60,25 @@
       {
         "pagePath": "pages/index/index",
         "iconPath": "static/images/home.png",
-        "selectedIconPath": "static/images/home@selected.png",
+        "selectedIconPath": "static/images/home_selected.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/catalog/catalog",
         "iconPath": "static/images/category.png",
-        "selectedIconPath": "static/images/category@selected.png",
+        "selectedIconPath": "static/images/category_selected.png",
         "text": "分类"
+      },
+      {
+        "pagePath": "pages/company/company",
+        "iconPath": "static/images/company.png",
+        "selectedIconPath": "static/images/company_selected.png",
+        "text": "公司简介"
       },
       {
         "pagePath": "pages/ucenter/index/index",
         "iconPath": "static/images/my.png",
-        "selectedIconPath": "static/images/my@selected.png",
+        "selectedIconPath": "static/images/my_selected.png",
         "text": "个人"
       }
     ]
