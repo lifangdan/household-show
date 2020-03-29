@@ -186,7 +186,7 @@
 </view>
 
 <!-- 底部按钮 -->
-<view bindtap="addCollectOrNot" class="bottom-btn">
-  <view wx:if="{{collect}}" class="r">加入收藏</view>
-  <view wx:else class="cancel">取消收藏</view>
+<view bindtap="addCollectOrNot" wx:if="{{!isGroupon}}" class="bottom-btn">
+  <view wx:if="{{collect}}" class="cancel">取消收藏</view>
+  <view wx:else class="r">加入收藏</view>
 </view>
