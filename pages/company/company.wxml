@@ -1,13 +1,29 @@
 <!--pages/company/company.wxml-->
 <view>
   <view class="company-img">
-    <image src="../../static/images/company_bg.jpg"></image>
-    <view class="company-name">奔宝家居有限公司</view>
+    <image src="{{reqData.companyPhoto}}"></image>
+    <view class="company-name">{{reqData.companyName}}</view>
   </view>
   <view class="company-info">
-    <view class="item" wx:for="{{companyInfo}}" wx:key="index">
-      <view class="title">{{item.label}} | {{item.en}}</view>
-      <view class="info" data-value="{{item.value}}" bindlongpress="copy">{{item.value}}</view>
+    <view class="item">
+      <view class="title">公司简介 | Company profile</view>
+      <view class="info" data-value="{{reqData.companyBrief}}" bindlongpress="copy">{{reqData.companyBrief}}</view>
     </view>
+    <view class="item">
+      <view class="title">地址 | Address</view>
+      <view class="info" data-value="{{reqData.companyAddr}}" bindlongpress="copy">{{reqData.companyAddr}}</view>
+    </view>
+    <view class="item">
+      <view class="title">电话 | Tel</view>
+      <view class="info" data-value="{{reqData.companyPhone}}" bindlongpress="copy">{{reqData.companyPhone}}</view>
+    </view>
+    <view class="item">
+      <view class="title">微信号 | WeChat</view>
+      <view class="info" data-value="{{reqData.companyWechat}}" bindlongpress="copy">{{reqData.companyWechat}}</view>
+    </view>
+    <!-- <view class="item">
+      <view class="title">客服 | Service</view>
+      <view class="info" data-value="{{reqData.companyWechat}}" bindlongpress="copy">{{reqData.companyWechat}}</view>
+    </view> -->
   </view>
 </view>

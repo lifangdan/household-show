@@ -1,3 +1,5 @@
+var util = require('../../utils/util.js');
+var api = require('../../config/api.js');
 Page({
   /**
    * 页面的初始数据
@@ -29,7 +31,8 @@ Page({
         en: 'Service',
         value: '15007003753'
       }, 
-    ]
+    ],
+    reqData:{}
   },
   /**
    * 复制相关信息
@@ -48,12 +51,26 @@ Page({
       }
     })
   },
+  /**
+   * 获取公司简介
+   */
+  getCompanyInfo:function(){
+    let that = this;
+    util.request(api.getCompanyInfo).then(function (res) {
+      console.log(res)
+      if (res.errno === 0) {
+        that.setData({
+          reqData: res.data
+        });
+      }
+    });
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    this.getCompanyInfo()
   },
 
   /**
