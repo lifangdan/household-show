@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="profile-info" bindtap="goLogin">
+    <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    <view class="info">
+      <text class="name">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+
+  <view class='separate'></view>
+  <view class="user_area">
+    <van-cell-group>
+      <van-cell size="large" title="商品收藏" value="" is-link bind:click="goCollect">
+        <image class="icon-img" slot="icon" src="/static/images/collect.png"></image>
+      </van-cell>
+      <van-cell size="large" title="浏览足迹" value="" is-link bind:click="goFootprint">
+        <image class="icon-img" slot="icon" src="/static/images/footprint.png"></image>
+      </van-cell>
+      <van-cell size="large" title="联系客服" value="" is-link class="contact-cell">
+      <contact-button class="contact-btn" type="default-dark" session-from="weapp">
+        </contact-button>
+        <image class="icon-img" slot="icon" src="/static/images/customer.png"></image>
+      </van-cell>
+      <van-cell size="large" title="关于我们" value="" is-link bind:click="aboutUs">
+        <image class="icon-img" slot="icon" src="/static/images/about.png"></image>
+      </van-cell>
+    </van-cell-group>
+  </view>
+  <view class="logout" wx:if="{{hasLogin}}" bindtap="exitLogin">退出登录</view>
+</view>

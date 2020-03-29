@@ -1,0 +1,111 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 搜索 -->
+  <view class="search">
+    <navigator url="/pages/search/search" class="input">
+      <van-icon name="search" />
+      <text class="txt">商品搜索, 共{{goodsCount}}款好物</text>
+    </navigator>
+  </view>
+  <!-- 轮播图 -->
+  <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+    <swiper-item wx:for="{{banner}}" wx:key="id">
+      <block wx:if="{{item.link>0}}">
+        <navigator url="/pages/goods/goods?id={{item.link}}">
+          <image src="{{item.url}}" background-size="cover"></image>
+        </navigator>
+      </block>
+      <block wx:else>
+        <image src="{{item.url}}" background-size="cover"></image>
+      </block>
+    </swiper-item>
+  </swiper>
+  <!-- 菜单分类 -->
+  <view class="m-menu">
+    <navigator class="item" url="/pages/category/category?id={{item.id}}" wx:for="{{channel}}" wx:key="id">
+      <image src="{{item.iconUrl}}" background-size="cover"></image>
+      <text>{{item.name}}</text>
+    </navigator>
+  </view>
+  <!-- 新品首发 -->
+  <view class="a-section a-newgoods">
+    <view class="h">
+      <navigator url="../brand/brand">
+        <text class="txt">新品首发</text>
+      </navigator>
+    </view>
+    <view class="b">
+      <view class="item" wx:for="{{newGoods}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+        <navigator url="../goods/goods?id={{item.id}}">
+          <view class="wrap">
+            <image class="img" src="{{item.picUrl}}" mode="aspectFill"></image>
+            <view class="item-name">
+              <text>{{item.name}}</text>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view class="a-section a-new" wx:if="{{newGoods.length > 0}}">
+    <view class="h">
+      <view>
+        <navigator url="../hotGoods/hotGoods">
+          <text class="txt">人气推荐</text>
+        </navigator>
+      </view>
+    </view>
+    <view class="b">
+      <view class="item" wx:for="{{hotGoods}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+        <navigator url="../goods/goods?id={{item.id}}">
+          <image class="img" src="{{item.picUrl}}" background-size="cover"></image>
+          <text class="name">{{item.name}}</text>
+          <text class="price">￥{{item.retailPrice}}</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+  <view class="a-section a-topic" wx:if="topics.length > 0" hidden="{{topics.length <= 0}}">
+    <view class="h">
+      <view>
+        <navigator url="/pages/topic/topic">
+          <text class="txt">专题精选</text>
+        </navigator>
+      </view>
+    </view>
+    <view class="b">
+      <scroll-view scroll-x class="list">
+        <view class="item" wx:for="{{topics}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+          <navigator url="../topicDetail/topicDetail?id={{item.id}}">
+            <image class="img" src="{{item.picUrl}}" background-size="cover"></image>
+            <view class="np">
+              <text class="name">{{item.title}}</text>
+              <text class="price">￥{{item.price}}元起</text>
+            </view>
+            <text class="desc">{{item.subtitle}}</text>
+          </navigator>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="good-grid" wx:for="{{floorGoods}}" wx:key="id">
+    <view class="h">
+      <text>{{item.name}}</text>
+    </view>
+    <view class="b">
+      <block wx:for="{{item.goodsList}}" wx:for-index="iindex" wx:for-item="iitem" wx:key="id">
+        <view class="item {{iindex % 2 == 0 ? '' : 'item-b'}}">
+          <navigator url="../goods/goods?id={{iitem.id}}" class="a">
+            <image class="img" src="{{iitem.picUrl}}" background-size="cover"></image>
+            <text class="name">{{iitem.name}}</text>
+            <text class="price">￥{{iitem.retailPrice}}</text>
+          </navigator>
+        </view>
+      </block>
+    </view>
+    <navigator url="/pages/category/category?id={{item.id}}" class="t">
+      <view class="txt">{{'更多'+item.name+'好物 >'}}</view>
+    </navigator>
+  </view>
+</view>

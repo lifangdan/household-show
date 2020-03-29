@@ -1,0 +1,40 @@
+<view class="container">
+
+  <!-- <view class="label">项目名称:</view>
+  <view class="about-item">
+    <view class="item-left">
+      <text>{{name}}</text> 
+    </view>
+  </view>
+-->
+  <view class="label">长沙地区负责人:</view>
+  <view class="about-item">
+    <view class="item-left">
+      <text>{{lname}}</text> 
+    </view>
+    <view class="item-right" bindtap="showLocation">
+      <!-- <van-icon class="right-icon" name="location-o" />     -->
+    </view>
+  </view> 
+
+  <view class="label">电话号码:</view>
+  <view class="about-item">
+    <view class="item-left">
+      <text>{{lphone}}</text> 
+    </view>
+    <view class="item-right" bindtap="callPhone">
+      <van-icon class="right-icon" name="phone-o" />
+    </view>
+  </view>
+
+  <view class="label">微信: </view>
+  <view class="about-item">
+    <view class="item-left">
+      <text>{{wx}}</text> 
+    </view>
+    <view class="item-right">
+      <van-icon class="right-icon" name="friends-o" />
+    </view>
+  </view>
+
+</view>
