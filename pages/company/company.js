@@ -1,5 +1,4 @@
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -23,14 +22,31 @@ Page({
       {
         label: '微信号',
         en: 'WeChat',
-        value: '15007003751'
+        value: '15007003752'
       },
       {
         label: '客服',
         en: 'Service',
-        value: '15007003751'
+        value: '15007003753'
       }, 
     ]
+  },
+  /**
+   * 复制相关信息
+   */
+  copy: function (e) {
+    console.log(e)
+    let copyVal = e.currentTarget.dataset.value
+    wx.setClipboardData({
+      data: copyVal,
+      success() {
+        wx.showToast({
+          title: '复制成功',
+          icon: 'success',
+          duration: 1000
+        })
+      }
+    })
   },
 
   /**

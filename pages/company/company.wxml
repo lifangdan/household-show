@@ -1,13 +1,13 @@
 <!--pages/company/company.wxml-->
 <view>
   <view class="company-img">
-    <image src="../../static/images/new.png"></image>
+    <image src="../../static/images/company_bg.jpg"></image>
     <view class="company-name">奔宝家居有限公司</view>
   </view>
-  <view class="comany-info">
-    <view class="item" wx:for="{{companyInfo}}">
+  <view class="company-info">
+    <view class="item" wx:for="{{companyInfo}}" wx:key="index">
       <view class="title">{{item.label}} | {{item.en}}</view>
-      <view class="info">{{item.value}}</view>
+      <view class="info" data-value="{{item.value}}" bindlongpress="copy">{{item.value}}</view>
     </view>
   </view>
 </view>
