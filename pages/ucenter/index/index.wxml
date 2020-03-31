@@ -16,12 +16,15 @@
         <image class="icon-img" slot="icon" src="/static/images/footprint.png"></image>
       </van-cell>
       <van-cell size="large" title="联系客服" value="" is-link class="contact-cell">
-      <contact-button class="contact-btn" type="default-dark" session-from="weapp">
+        <contact-button class="contact-btn" type="default-dark" session-from="weapp">
         </contact-button>
         <image class="icon-img" slot="icon" src="/static/images/customer.png"></image>
       </van-cell>
-      <van-cell size="large" title="关于我们" value="" is-link bind:click="aboutUs">
+      <van-cell size="large" title="技术支持" value="" is-link bind:click="aboutUs">
         <image class="icon-img" slot="icon" src="/static/images/about.png"></image>
+      </van-cell>
+      <van-cell size="large" title="意见反馈" value="" is-link bind:click="goFeedback">
+        <image class="icon-img" slot="icon" src="/static/images/feedback.png"></image>
       </van-cell>
     </van-cell-group>
   </view>

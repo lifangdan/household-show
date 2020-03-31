@@ -9,8 +9,8 @@
     </view>
   </picker>
   <view class="fb-body">
-    <textarea class="content" placeholder="对我们网站、商品、服务，你还有什么建议吗？你还希望在商城上买到什么？请告诉我们..." bindinput="contentInput" maxlength="500" auto-focus="true" value="{{content}}" />
-    <view class="weui-uploader__files" id="uploaderFiles">
+    <textarea class="content" placeholder="对我们网站、商品、服务，你还有什么建议吗？请告诉我们..." bindinput="contentInput" maxlength="500" auto-focus="true" value="{{content}}" />
+    <!-- <view class="weui-uploader__files" id="uploaderFiles">
       <block wx:for="{{files}}" wx:key="*this">
         <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
           <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
@@ -19,7 +19,7 @@
       <view class="weui-uploader__input-box" wx:if="{{ files.length < 5 }}">
         <view class="weui-uploader__input" bindtap="chooseImage"></view>
       </view>
-    </view>
+    </view> -->
     <view class="text-count">{{contentLength}}/500</view>
   </view>
   <view class="fb-mobile">
