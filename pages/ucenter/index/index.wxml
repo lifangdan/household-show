@@ -24,7 +24,7 @@
         <image class="icon-img" slot="icon" src="/static/images/about.png"></image>
       </van-cell>
       <van-cell size="large" title="意见反馈" value="" is-link bind:click="goFeedback">
-        <image class="icon-img" slot="icon" src="/static/images/feedback.png"></image>
+        <image class="icon-img" slot="icon" src="/static/images/feedback_2.png"></image>
       </van-cell>
     </van-cell-group>
   </view>
