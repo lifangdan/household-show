@@ -32,7 +32,13 @@ Page({
         value: '15007003753'
       }, 
     ],
-    reqData:{}
+    reqData:{},
+    markers: [{
+      id: 1,
+      latitude: '',
+      longitude: '',
+      name: 'T.I.T 创意园'
+    }],
   },
   /**
    * 复制相关信息
@@ -59,8 +65,14 @@ Page({
     util.request(api.getCompanyInfo).then(function (res) {
       console.log(res)
       if (res.errno === 0) {
+        let latitude='markers[0].latitude'
+        let longitude='markers[0].longitude'
         that.setData({
           reqData: res.data
+        });
+        that.setData({
+          [latitude]: res.data.companyLatitude,
+          [longitude]: res.data.companyLongitude,
         });
       }
     });

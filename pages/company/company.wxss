@@ -31,3 +31,7 @@
   color: #666;
   margin-bottom: 10rpx
 }
+.map-box{
+  width: 100%;
+  height: 400rpx;
+}
