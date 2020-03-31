@@ -27,6 +27,7 @@
 
 .item-right{
   margin-right: 15rpx;
+  margin-left: 15rpx;
   margin-top: auto;
   margin-bottom: auto;
 }

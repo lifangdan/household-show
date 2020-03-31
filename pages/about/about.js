@@ -18,12 +18,12 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    this.getAbout()
+  onLoad: function(options) {
+    // this.getAbout()
   },
-  getAbout: function () {
+  getAbout: function() {
     let that = this;
-    util.request(api.AboutUrl).then(function (res) {
+    util.request(api.AboutUrl).then(function(res) {
       if (res.errno === 0) {
         that.setData({
           name: res.data.name,
@@ -36,19 +36,26 @@ Page({
       }
     });
   },
-  showLocation: function (e) {
-    var that = this
-    wx.openLocation({
-      latitude: parseFloat(that.data.latitude),
-      longitude: parseFloat(that.data.longitude),
-      name: that.data.name,
-      address: that.data.address,
+  /**
+   * 复制相关信息
+   */
+  copy: function(e) {
+    let copyVal = e.currentTarget.dataset.value
+    wx.setClipboardData({
+      data: copyVal,
+      success() {
+        wx.showToast({
+          title: '复制成功',
+          icon: 'success',
+          duration: 1000
+        })
+      }
     })
   },
-  callPhone: function (e) {
+  callPhone: function(e) {
     var that = this
     wx.makePhoneCall({
-      phoneNumber: that.data.phone,
+      phoneNumber: "15007003751",
     })
   }
 })

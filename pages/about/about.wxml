@@ -1,26 +1,15 @@
 <view class="container">
-
-  <!-- <view class="label">项目名称:</view>
+  <view class="label">小程序开发负责人:</view>
   <view class="about-item">
     <view class="item-left">
-      <text>{{name}}</text> 
+      <text>陈生</text>
     </view>
   </view>
--->
-  <view class="label">长沙地区负责人:</view>
-  <view class="about-item">
-    <view class="item-left">
-      <text>{{lname}}</text> 
-    </view>
-    <view class="item-right" bindtap="showLocation">
-      <!-- <van-icon class="right-icon" name="location-o" />     -->
-    </view>
-  </view> 
 
   <view class="label">电话号码:</view>
   <view class="about-item">
     <view class="item-left">
-      <text>{{lphone}}</text> 
+      <text bindlongpress="copy" data-value="15007003751">15007003751</text>
     </view>
     <view class="item-right" bindtap="callPhone">
       <van-icon class="right-icon" name="phone-o" />
@@ -30,11 +19,13 @@
   <view class="label">微信: </view>
   <view class="about-item">
     <view class="item-left">
-      <text>{{wx}}</text> 
-    </view>
-    <view class="item-right">
-      <van-icon class="right-icon" name="friends-o" />
+      <text bindlongpress="copy" data-value="15007003751">15007003751</text>
     </view>
   </view>
-
+  <view class="label">邮箱: </view>
+  <view class="about-item">
+    <view class="item-left">
+      <text bindlongpress="copy" data-value="chen798452710@126.com">chen798452710@126.com</text>
+    </view>
+  </view>
 </view>
