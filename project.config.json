@@ -311,12 +311,12 @@
 					"query": "id=1",
 					"scene": null
 				},
-        {
-          "id": -1,
-          "name": "公司简介",
-          "pathName": "pages/company/company",
-          "query": ""
-        }
+				{
+					"id": -1,
+					"name": "公司简介",
+					"pathName": "pages/company/company",
+					"query": ""
+				}
 			]
 		}
 	}

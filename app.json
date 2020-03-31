@@ -40,7 +40,7 @@
     "pages/ucenter/aftersale/aftersale",
     "pages/ucenter/aftersaleList/aftersaleList",
     "pages/ucenter/aftersaleDetail/aftersaleDetail",
-    "pages/company/company"  
+    "pages/company/company"
   ],
   "window": {
     "navigationBarBackgroundColor": "#FFFFFF",

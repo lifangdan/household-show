@@ -1,12 +1,14 @@
 /* pages/company/company.wxss */
-.company-img{
+
+.company-img {
   height: 350rpx;
   overflow: hidden;
   position: relative;
 }
-.company-name{
+
+.company-name {
   position: absolute;
-  top:20rpx;
+  top: 20rpx;
   left: 0;
   height: 50rpx;
   line-height: 50rpx;
@@ -16,22 +18,37 @@
   border-bottom-right-radius: 25rpx;
   color: #fff;
 }
-.company-img image{
+
+.company-img image {
   width: 100%;
 }
-.company-info{
+
+.company-info {
   padding: 5rpx 20rpx 15rpx;
 }
-.company-info .item{
+
+.company-info .item {
   padding: 20rpx 0;
   border-bottom: 1px solid #e7e7e7;
-  text-align: justify；
+  text-align: justify；;
+  position: relative;
 }
-.company-info .item .title{
+
+.company-info .item .title {
   color: #666;
-  margin-bottom: 10rpx
+  margin-bottom: 10rpx;
+  
 }
-.map-box{
+
+.company-info .item .item-right {
+  position: absolute;
+  right: 10rpx;
+  /* padding: 15rpx; */
+  top: 35rpx;
+}
+
+.map-box {
   width: 100%;
-  height: 400rpx;
+  height: 600rpx;
+  padding: 20rpx;
 }
