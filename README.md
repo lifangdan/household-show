@@ -8,7 +8,7 @@
 - 当前小程序已上线，微信扫描下面的小程序二维码查看：
 
 <img src="https://wxmall-1256029463.cos.ap-guangzhou.myqcloud.com/img/00.jpg" height="300" width="300" >
-图片无法显示可以访问以下链接：
+二维码无法显示可以访问以下链接：
 https://wxmall-1256029463.cos.ap-guangzhou.myqcloud.com/img/00.jpg
 
 ## 部分截图
